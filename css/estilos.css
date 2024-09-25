@@ -43,8 +43,71 @@ a {text-decoration: none;}
 
 .topo {
     height: 12vh;
-    background-color: yellow;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.titulo-menu a {
+    color: var(--cor-escura);
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.menu a:hover, .menu a:focus {
+    background-color: var(--cor-intermediaria);
+}
+
+.links-menu {
+    /* Atenção! Neste ponto, fazemos com que os links do menu iniciem escondidos (display:none) em telas pequenas. posteriormente com a ajud aod css combinado com js, faremos os comandos becessarios para exibir/esconder de forma alternada */
+    display: none;
+
+    a {
+        color: var(--cor-escura);
+        font-weight: bold;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.links-menu.aberto {
+    /*Ativamos o flex paera anular o displey none (fazer os links aparecerem) e ao mesmo tempo ter o recurso do flex*/
+    display: flex;
+
+    /*direção coluna (para ficar um item encima do outro)*/
+    flex-direction: column;
+
+    /*Usamos o position e coordenadas para ajustar a posição e o tamanho que os links ocuparão na tela logo abaixo da palavra menu*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--cor-clara);
+}
+
+.destaque {
+    background-image: url(/imagens/fundo-destaque.jpg);
+    background-size: cover;
+    background-attachment: fixed; 
+    
+
+    color: var(--cor-clara);
+   
+    height: 88vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    h2 {
+        font-size: 3rem;
+        font-weight: 800;
+    }
+
+    p {
+        font-size: 1,25rem;
+        font-weight: 700;
+    }
 }
