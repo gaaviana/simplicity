@@ -108,14 +108,58 @@ a {text-decoration: none;}
     )*/
 
     h2, p {
+        animation: animaDestaque 1s;   
         text-align: center;
         color: var(--cor-clara);
     }
 
-    h2 {
-        font-size: clamp(3rem, 10vw, 7rem);
+    h2 {font-size: clamp(3rem, 10vw, 7rem);}
+
+    p {
+        animation-delay: 0,5s; 
+
+        /* Antes da animação: o elemento p assume o estilo do primeiro keyframe (ou seja, o from). portanto assim forçamos a inicicar com o opacity zero e escala menor 30% */
+        animation-fill-mode: backwards;
+        font-size: clamp(1.5rem, 3vw, 3rem);
     }
 
-    p { font-size: clamp(1.5rem, 3vw, 3rem);}
-
 }
+
+@keyframes animaDestaque {
+    from {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+article  {
+
+    h2 {
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-family: Raleway, sans-serif;
+    color: var(--cor-titulo);
+    }
+
+    p {
+        padding: .5rem 0;
+        font-size: 1.2rem;
+    }
+
+    address {
+        font-style: normal;
+        font-size: 1.2rem;
+    }
+}
+
+.front-end, .historia, .localizacao {
+    text-align: center;
+}
+
+
