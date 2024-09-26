@@ -91,9 +91,6 @@ a {text-decoration: none;}
     background-image: url(/imagens/fundo-destaque.jpg);
     background-size: cover;
     background-attachment: fixed; 
-    
-
-    color: var(--cor-clara);
    
     height: 88vh;
     display: flex;
@@ -101,13 +98,24 @@ a {text-decoration: none;}
     align-items: center;
     justify-content: center;
     
-    h2 {
-        font-size: 3rem;
-        font-weight: 800;
+    /* funçao clamp()
+    Função until para o redimensionamento responsivo de acordo com criterios de tamanhos minimo ideial variavel/responsivo e maximo. uso mais comuns para textos responsivos, mas pode ser usado para qualquer propiedade que envolva tamanhos
+    
+    clamp (
+        tamanho minimo
+        tamamho ideal/variavel/responsivo
+        tamanho maximo    
+    )*/
+
+    h2, p {
+        text-align: center;
+        color: var(--cor-clara);
     }
 
-    p {
-        font-size: 1,25rem;
-        font-weight: 700;
+    h2 {
+        font-size: clamp(3rem, 10vw, 7rem);
     }
+
+    p { font-size: clamp(1.5rem, 3vw, 3rem);}
+
 }
