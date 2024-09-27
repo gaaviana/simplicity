@@ -209,6 +209,7 @@ footer {
     display: flex;
     text-align: center;
     align-items: center;
+    justify-content: center;
    
 }
 
@@ -239,3 +240,53 @@ footer {
  
 6) Crie uma classe chamada "limitador" com largura de 95vw e margem automática. 
 Aplique esta classe no cabeçalho (provisoriamente) e também no artigo front-end. */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* REGRAS PARA PAGINAS INTERNAS (PRODUTOS, SERVIÇOS CONTATOS) */
+.conteudo-interno {
+    background-color: var(--cor-intermediaria);
+    padding: .5rem;
+    border-radius: 8px;
+
+    h2 {
+        padding-left: 0;
+        font-size: 1.8rem;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border: black solid 4px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    
+    caption {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        padding-bottom: .3rem;
+    }
+
+    th {
+        background-color: var(--cor-escura);
+        color: var(--cor-clara);
+    }
+
+    th, td {
+        border: black 1px solid;
+        padding: 8px;
+       
+    }
+
+    td:nth-child(2) {text-align: center;}
+
+    td:last-child, th:last-child {text-align: right;}
+
+    tr:nth-child(odd) {
+        background-color: var(--cor-intermediaria) ;
+    }
+
+    tr:nth-child(even) {
+        background-color: var(--cor-clara) ;
+    }
+}
