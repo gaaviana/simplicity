@@ -42,7 +42,7 @@ a {text-decoration: none;}
 }
 
 .topo {
-  
+    z-index: 1 ;
     position: sticky;
     top: 0;
     background-color: var(--cor-clara);
@@ -290,3 +290,25 @@ table {
         background-color: var(--cor-clara) ;
     }
 }
+
+.galeria {
+    
+
+    img {
+        
+        margin: 1.5rem;
+        border-radius: 50%;
+        box-shadow: black 0 0px 30px  ;
+
+
+        transform: scale(0.8) rotate(-10deg);
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1) rotate(0);
+        }
+       
+    }
+}
+
+
