@@ -100,7 +100,7 @@ a {text-decoration: none;}
 }
 
 .destaque {
-    background-image: url(/imagens/fundo-destaque.jpg);
+    background-image: url(../imagens/fundo-destaque.jpg);
     background-size: cover;
     background-attachment: fixed; 
    
@@ -296,9 +296,10 @@ table {
 
     img {
         
-        margin: 1.5rem;
+        margin: 0.5rem;
         border-radius: 50%;
         box-shadow: black 0 0px 30px  ;
+      
 
 
         transform: scale(0.8) rotate(-10deg);
@@ -320,6 +321,7 @@ table {
         li {width: 100%};
     }
     .menu {
+  
         width: 60%;
     }
     
@@ -331,3 +333,5 @@ table {
     .limitador { max-width: 1000px;}
     
 }
+
+
